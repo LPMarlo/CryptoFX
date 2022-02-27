@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptofx.SignupController">
+   <children>
+      <Label layoutX="75.0" layoutY="25.0" text="Sign up">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameSignup" layoutX="75.0" layoutY="120.0" promptText="Name" style="-fx-background-color: teal;" />
+      <TextField fx:id="lastNameSignup" layoutX="75.0" layoutY="170.0" promptText="Last name" style="-fx-background-color: teal;" />
+      <TextField fx:id="nicknameSignup" layoutX="75.0" layoutY="220.0" promptText="Nickname" style="-fx-background-color: teal;" />
+      <PasswordField fx:id="passwordSignup" layoutX="75.0" layoutY="270.0" promptText="Password" style="-fx-background-color: teal;" />
+      <Button layoutX="105.0" layoutY="328.0" mnemonicParsing="false" onAction="#signup" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: teal; -fx-text-fill: white;" text="Sign up">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Button>
+      <Label fx:id="errorLabel" layoutX="75.0" layoutY="301.0" prefHeight="18.0" prefWidth="150.0" />
+      <Hyperlink layoutX="240.0" layoutY="360.0" onAction="#loginAccess" text="Log in" />
+   </children>
+</AnchorPane>

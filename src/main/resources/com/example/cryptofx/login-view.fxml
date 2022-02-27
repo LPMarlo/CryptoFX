@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptofx.LoginController">
+   <children>
+      <Label layoutX="87.0" layoutY="23.0" text="Log In" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nicknameLogin" layoutX="75.0" layoutY="109.0" promptText="Nickname" style="-fx-background-color: teal;" />
+      <Button layoutX="97.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: teal; -fx-text-fill: white;" text="Log In">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="errorLabel" layoutX="74.0" layoutY="190.0" prefHeight="18.0" prefWidth="182.0" style="-fx-text-fill: red;" />
+      <PasswordField fx:id="passwordLogin" layoutX="75.0" layoutY="157.0" promptText="Password" style="-fx-background-color: teal;" />
+      <Hyperlink fx:id="linkLogin" layoutX="237.0" layoutY="262.0" onAction="#signupAccess" text="Sign up" />
+   </children>
+</AnchorPane>
