@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/CoinGecko-Java-master.zip!/CoinGecko-Java-master/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/lib/CoinGecko-Java-master.zip!/CoinGecko-Java-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
