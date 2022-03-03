@@ -11,20 +11,25 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<junit.version>5.8.1</junit.version>
+		<junit.version>5.8.2</junit.version>
 	</properties>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
-			<version>17.0.1</version>
+			<version>17.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-fxml</artifactId>
-			<version>17.0.1</version>
+			<version>17.0.2</version>
 		</dependency>
 
 		<dependency>
@@ -42,12 +47,54 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
-			<version>4.0.1</version>
+			<version>4.4.15</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.0.2</version>
+			<version>4.5.13</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-metadata</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-functions</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-fonts</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-annotation-processors</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-chart-customizers</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-chart-themes</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-custom-visualization</artifactId>
+			<version>6.18.1</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

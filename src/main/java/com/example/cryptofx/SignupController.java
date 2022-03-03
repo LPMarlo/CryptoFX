@@ -17,6 +17,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Class that handles the signup process
+ */
 public class SignupController {
     @FXML
     private TextField nameSignup;
@@ -33,6 +36,10 @@ public class SignupController {
     @FXML
     private Label errorLabel;
 
+    /**
+     * Method that handles the signup process
+     * @param event
+     */
     @FXML
     private void signup(ActionEvent event) {
         if (nameSignup.getText().isEmpty() || lastNameSignup.getText().isEmpty() || nicknameSignup.getText().isEmpty() || passwordSignup.getText().isEmpty()) {
@@ -82,6 +89,11 @@ public class SignupController {
             }
         }
     }
+
+    /**
+     * Method that handles the back button
+     * @param event
+     */
     public void loginAccess(ActionEvent event) {
         Stage stage2 = (Stage) this.nameSignup.getScene().getWindow();
         stage2.close();

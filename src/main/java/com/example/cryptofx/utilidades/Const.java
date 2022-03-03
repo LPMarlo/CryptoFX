@@ -2,6 +2,11 @@ package com.example.cryptofx.utilidades;
 
 public class Const {
 
+    // BD
+    public static final String BD = "jdbc:mysql://109.106.246.51:3306/u380254938_CryptoFX";
+    public static final String USER = "u380254938_betis";
+    public static final String PASSWORD = "VivaElBetis7";
+
     // BASE
     public static final String BASE_URL = "https://api.coingecko.com/api/v3/";
 

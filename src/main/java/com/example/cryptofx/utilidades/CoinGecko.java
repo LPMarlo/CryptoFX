@@ -10,8 +10,18 @@ import java.util.List;
 
 import static com.example.cryptofx.utilidades.Const.*;
 
+/**
+ * Class that implements the CoinGecko API
+ */
 public class CoinGecko {
 
+    /**
+     * Method that makes a GET request to the CoinGecko API
+     * @param url
+     * @return String with the response
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static String getData(String url) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -21,6 +31,12 @@ public class CoinGecko {
         return response.body();
     }
 
+    /**
+     * Method that gets the price of a coin
+     * @param coin
+     * @param fiat
+     * @return String with the price
+     */
     public String getCoinPrice(String coin, String fiat) {
         String url = BASE_URL + SERVICE_GET_PRICE + PARAM_IDS + coin + AMPERSAND + PARAM_VS_CURRENCIES + fiat;
         String price = null;
@@ -32,15 +48,19 @@ public class CoinGecko {
         return price;
     }
 
-    public List<String> getCoinsFormatted() {
+    /**
+     * Method that gets the list of coins
+     * @return List with the coins
+     */
+    public List<String> getCoinsList() {
         List<String> coins = List.of(COIN_ADA, COIN_BCH, COIN_BTC, COIN_DASH, COIN_EOS, COIN_ETC, COIN_ETH, COIN_LTC, COIN_NEO, COIN_XLM, COIN_XRP, COIN_ZEC, COIN_XMR, COIN_TRX, COIN_BTG);
-        List<String> coinFormatted = new ArrayList<>();
-        for (String coin : coins) {
-            coinFormatted.add(upperCaseFirst(coin.trim().replace("-", " ")));
-        }
-        return coinFormatted;
+        return new ArrayList<>(coins);
     }
 
+    /**
+     * Method that gets the list of coins
+     * @return true if the coin is in the list
+     */
     public boolean checkConnection() {
         String response = null;
         try {
@@ -49,9 +69,5 @@ public class CoinGecko {
             System.out.println("Error al comprobar la conexión");
         }
         return response != null && response.contains("Moon");
-    }
-
-    public String upperCaseFirst(String var) {
-        return var != null ? var.substring(0, 1).toUpperCase() + var.substring(1) : "";
     }
 }
