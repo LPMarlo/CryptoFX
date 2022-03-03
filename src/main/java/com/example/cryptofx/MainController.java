@@ -55,7 +55,7 @@ public class MainController {
         } else {
             Connection con = null;
             try {
-                con = DriverManager.getConnection(BD, USER, PASSWORD);
+                con = DriverManager.getConnection(DB, USER, PASSWORD);
                 PreparedStatement ps = con.prepareStatement("SELECT * FROM user WHERE nickname = ? AND password = ?");
                 ps.setString(1, nicknameLogin.getText());
                 ps.setString(2, passwordLogin.getText());
@@ -182,7 +182,7 @@ public class MainController {
     private void insertHistory(String crypto, String fiat, String price, String nickname) {
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://109.106.246.51:3306/u380254938_CryptoFX", "u380254938_betis", "VivaElBetis7");
+            con = DriverManager.getConnection(DB, USER, PASSWORD);
             PreparedStatement ps = con.prepareStatement("INSERT INTO history (currency, fiat, price, nickname) VALUES (?, ?, ?, ?)");
             ps.setString(1, crypto);
             ps.setString(2, fiat);
@@ -202,7 +202,7 @@ public class MainController {
     private void getReport(ActionEvent event) {
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://109.106.246.51:3306/u380254938_CryptoFX", "u380254938_betis", "VivaElBetis7");
+            con = DriverManager.getConnection(DB, USER, PASSWORD);
             PreparedStatement ps = con.prepareStatement("SELECT * FROM history");
             ResultSet rs = ps.executeQuery();
             ResultSetMetaData rsmd = rs.getMetaData();
